@@ -9,10 +9,8 @@ fetchBreedDescription(breedName, (error, desc, name) => {
   } else  if (desc !== ""){
     console.log(`Search for '${breedName}' returned result for ${name}`);
     console.log(desc);
-  } else {
-    console.log('Search returned no results');
   }
-})
+});
 
 
 

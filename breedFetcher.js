@@ -8,13 +8,12 @@ const fetchBreedDescription = function(breedName, callback) {
     }
     const data = JSON.parse(body);
     if (data.length > 0) {
-      callback(null, data[0].description, data[0].name);
+      callback(null, data[0].description.trim(), data[0].name); //trim whitespace on description
     } else {
-      callback(null, "","");
+      callback("Invalid breed", null, null);
     }
   });
 }
-
 
 module.exports = {
   fetchBreedDescription
